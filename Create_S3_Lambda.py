@@ -7,9 +7,9 @@ def main():
   x = input('please enter the name of the bucket:')         #Taking input for bucket name
 
   if createbucket(x) == True:                                   #Calling createbucket function and passing input
-   print('\nYour Bucket has not been created with name {x}')
+   print(f'\nYour Bucket has not been created with name {x}')
   else:
-   print('\nYour Bucket has been created with name {x}')
+   print(f'\nYour Bucket has been created with name {x}')
 
    print('\nListing all the buckets in your account:')       #Listing all existing buckets in account
    for bucket in s3.buckets.all():
