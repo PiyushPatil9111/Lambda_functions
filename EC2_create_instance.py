@@ -32,6 +32,7 @@ def main():
                 instance_id = instance.id
                 print(f"An instance has been created with the name {instance_name} with instance id {instance_id}")
                 time.sleep(60)
+                ec2.Instance(instance_id).stop()
                 ec2.Instance(instance_id).terminate()
                 print(f"here we have terminated the instance {instance_name}")
     else:
